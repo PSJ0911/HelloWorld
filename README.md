@@ -2,8 +2,8 @@ TIL
 ======================================================
 1주차 과제
 -------------
-* HelloWorld<https://github.com/PSJ0911/HelloWorld/blob/main/HelloWorld.md>
+* [HelloWorld](https://github.com/PSJ0911/HelloWorld/blob/main/HelloWorld.md)
 
-Hello World 실행
+2 주차 관제
 ---------------
 
