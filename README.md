@@ -13,4 +13,4 @@ TIL
 
 4주차
 ----------------
-[Timer]([Dart](https://github.com/PSJ0911/HelloWorld/blob/main/Dart.md))
+[Timer](https://github.com/PSJ0911/HelloWorld/blob/main/timer.md)
