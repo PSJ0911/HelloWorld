@@ -86,4 +86,4 @@ class _MyHomePageState extends State<MyHomePage> {
 
 완성 사진
 -----------------
-![image]()
+![image](/timer.png)
