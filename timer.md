@@ -1,58 +1,88 @@
-실습
+과제
 ======================================================
-구구단
+현재 시각을 표시하는 앱 코
 -------------
 ```Dart
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+
 void main() {
-  for (int i = 2; i < 10; i++) {
-    for (int j = 1; j < 10; j++) {
-      print('$i X $j =  ${j * i}');
-    }
-    print('');
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: '현재 시각',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const MyHomePage(title: '현재 시각!'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  String currentTime = '';
+
+  @override
+  void initState() {
+    super.initState();
+    // 1초마다 시각을 갱신하는 타이머 설정
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        currentTime = getCurrentTime();
+      });
+    });
+  }
+
+  // 현재 시각을 반환하는 함수
+  String getCurrentTime() {
+    final now = DateTime.now();
+    final hour = now.hour;
+    final minute = now.minute;
+    final second = now.second;
+    final date = now.toLocal().toString().split(' ')[0]; // yyyy-MM-dd 형식
+
+    String period = hour >= 12 ? '오후' : '오전'; // 오전/오후 구분
+    String formattedTime = '${hour > 12 ? hour - 12 : hour}:${minute.toString().padLeft(2, '0')}:${second.toString().padLeft(2, '0')}';
+
+    return '$date\n$period $formattedTime';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Text(
+          currentTime,
+          style: TextStyle(
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+          ),
+          textAlign: TextAlign.center,
+            ),
+        ),
+      );
   }
 }
 ```
 
-사각형
----------------
-```Dart
-void main() {
-  var n = 10;
-  var result = '';
-  for (var y = 0; y < n; y++) {
-    for (var x = 0; x < n; x++) {
-      var c = f1(x,y,n);
-      if (c) {
-        result += '=';
-      }
-      else {
-        result += ' ';
-      }
-    }
-    result += '\n';
-  }
-  
-  print(result);
-}
-
-bool f1(int x, int y, int size) {
-  return x == 0
-    || y == 0
-    || x == size - 1
-    || y == size - 1;
-}
-```
-요일
----------------
-```Dart
-void main() {
-  var input = '2025-03-17';
-  
-  DateTime date = DateTime.parse(input);
-  
-  List<String> weekdays = ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'];
-  
-  String day = weekdays[date.weekday - 1];
-  print('$input은 $day입니다.');
-}
-```
+완성 사진
+-----------------
