@@ -17,4 +17,4 @@ TIL
 
 5주차 과제
 ----------------
-[Widget](https://github.com/PSJ0911/HelloWorld/blob/main/timer.md)
+[Widget](https://github.com/PSJ0911/HelloWorld/blob/main/Widget.md)
