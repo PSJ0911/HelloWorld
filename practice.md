@@ -1,82 +1,8 @@
-5주차 과제
+6주차 과제
 ======================================================
-Widget과 계산기
+실습
 -------------
-Widget
--------------
-```Dart
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Container(
-            padding: EdgeInsets.all(1),
-            color: Colors.black,
-            child: Container(
-              width: 300,
-              height: 400,
-              color: Colors.white,
-              child: Column(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Container(color: Colors.red),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Column(
-                            children: [
-                              Expanded(
-                                child: Container(color: Colors.blue),
-                              ),
-                              Expanded(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Container(color: Colors.black),
-                                    ),
-                                    Expanded(
-                                      child: Container(color: Colors.orange),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: Container(color: Colors.yellow),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-```
-
-계산기
+페이지 203 ~ 208 페이지 내용 실습
 -------------
 ```Dart
 import 'package:flutter/material.dart';
@@ -86,85 +12,65 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.black,
-        body: SafeArea(
-          child: Column(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Container(
-                  alignment: Alignment.bottomRight,
-                  padding: EdgeInsets.all(16),
-                  child: Text(
-                    '0',
-                    style: TextStyle(
-                      fontSize: 60,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  ),
-                ),
-              ),
+      title: 'Practice',
+      home: FirstPage(),
+    );
+  }
+}
 
-              Expanded(
-                flex: 5,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8),
-                  child: Column(
-                    children: _buildButtonRows(),
-                  ),
-                ),
-              ),
-            ],
-          ),
+class FirstPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    print('FirstPage - build');
+    return Scaffold(
+      appBar: AppBar(title: Text('FirstPage!')),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('다음'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SecondPage()),
+            );
+          },
         ),
       ),
     );
   }
+}
 
-  List<Widget> _buildButtonRows() {
-    final List<List<String>> buttons = [
-      ['%', 'CE', 'C', '⌫'],
-      ['½x', 'x²', '²√x', '÷'],
-      ['7', '8', '9', '×'],
-      ['4', '5', '6', '−'],
-      ['1', '2', '3', '+'],
-      ['+/-', '0', '.', '='],
-    ];
+class SecondPage extends StatefulWidget {
+  @override
+  _SecondPageState createState() => _SecondPageState();
+}
 
-    return buttons.map((row) {
-      return Expanded(
-        child: Row(
-          children: row.map((text) {
-            return _buildButton(text);
-          }).toList(),
-        ),
-      );
-    }).toList();
+class _SecondPageState extends State<SecondPage> {
+  @override
+  void initState() {
+    super.initState();
+    print('SecondPage - initState');
   }
 
-  Widget _buildButton(String text) {
-    bool isOperator = ['+', '−', '×', '÷', '=', '⌫'].contains(text);
-    Color color = isOperator ? Colors.grey.shade600 : Colors.grey.shade800;
+  @override
+  void dispose() {
+    print('SecondPage - dispose');
+    super.dispose();
+  }
 
-    return Expanded(
-      child: Padding(
-        padding: EdgeInsets.all(4),
-        child: Container(
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          alignment: Alignment.center,
-          child: Text(
-            text,
-            style: TextStyle(fontSize: 22, color: Colors.white),
-          ),
+  @override
+  Widget build(BuildContext context) {
+    print('SecondPage - build');
+    return Scaffold(
+      appBar: AppBar(title: Text('SecondPage!!')),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('뒤로'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
     );
