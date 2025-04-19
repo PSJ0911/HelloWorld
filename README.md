@@ -21,4 +21,4 @@ TIL
 
 6주차 과제
 ----------------
-[practice](https://github.com/PSJ0911/HelloWorld/blob/main/practice.md)
+[Practice](https://github.com/PSJ0911/HelloWorld/blob/main/practice.md)
