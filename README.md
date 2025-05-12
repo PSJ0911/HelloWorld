@@ -1,10 +1,10 @@
 TIL
 ======================================================
-*1주차 과제
+1주차 과제
 -------------
 [HelloWorld](https://github.com/PSJ0911/HelloWorld/blob/main/HelloWorld.md)
 
-*2주차 과제
+2주차 과제
 ---------------
 [Dart](https://github.com/PSJ0911/HelloWorld/blob/main/Dart.md)
 
@@ -23,6 +23,7 @@ TIL
 ----------------
 [Practice](https://github.com/PSJ0911/HelloWorld/blob/main/practice.md)
 
+* * *
 
 개인 프로젝트
 ======================================================
