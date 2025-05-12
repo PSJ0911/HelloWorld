@@ -2,7 +2,7 @@ TIL
 ======================================================
 과제
 -------------
-[HomeWork](https://github.com/PSJ0911/HelloWorld/blob/main/HelloWorld.md)
+[HomeWork](https://github.com/PSJ0911/HelloWorld/blob/main/README1.md)
 
 개인 프로젝트
 ======================================================
