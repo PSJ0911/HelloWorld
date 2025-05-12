@@ -8,4 +8,4 @@ TIL
 ======================================================
 프로젝트
 -------------
-[Project](https://github.com/PSJ0911/HelloWorld/blob/main/HelloWorld.md)
+[Project](https://github.com/PSJ0911/HelloWorld/blob/main/README2.md)
