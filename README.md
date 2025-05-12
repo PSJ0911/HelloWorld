@@ -6,6 +6,6 @@ TIL
 
 개인 프로젝트
 ======================================================
-프로젝트
+프로젝트 계획서
 -------------
 [Project](https://github.com/PSJ0911/HelloWorld/blob/main/README2.md)
