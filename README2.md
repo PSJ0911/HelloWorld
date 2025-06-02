@@ -14,5 +14,5 @@
 
 12주차 프로젝트
 -------------
-[과제/12주차-기능 개발(기본 기능).ppt]()
+[과제/12주차-기능 개발(기본 기능).ppt](https://github.com/PSJ0911/HelloWorld/blob/main/10%EC%A3%BC%EC%B0%A8-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%B0%8F%20%EA%B3%84%ED%9A%8D%EC%84%A4%EA%B3%84%20%EA%B3%84%ED%9A%8D%EC%84%9C.pptx)
 
