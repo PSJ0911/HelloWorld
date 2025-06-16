@@ -22,7 +22,7 @@
 
 14주차 프로젝트
 -------------
-[과제/14주차-테스트 및 수정사항 반영.ppt]()
+[과제/14주차-테스트 및 수정사항 반영.ppt](https://github.com/PSJ0911/HelloWorld/blob/main/14%EC%A3%BC%EC%B0%A8-%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EB%B0%8F%20%EC%88%98%EC%A0%95%EC%82%AC%ED%95%AD%20%EB%B0%98%EC%98%81.pptx)
 
 15주차 프로젝트
 -------------
