@@ -26,4 +26,4 @@
 
 15주차 프로젝트
 -------------
-[과제/15주차-최종발표.ppt]()
+[과제/15주차-최종발표.ppt](https://github.com/PSJ0911/HelloWorld/blob/main/15%EC%A3%BC%EC%B0%A8-%EC%B5%9C%EC%A2%85%EB%B0%9C%ED%91%9C.pdf)
